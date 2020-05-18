@@ -109,7 +109,7 @@ class Annotate extends Component {
           <div class={this.state[k+"-dropdown"] ? "dropdown is-active" : "dropdown"}>
             <div class="dropdown-trigger">
               <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3" onClick={() => this.handleDropdownClick(k)}>
-                <span>{ this.state.header[k] ? this.state.header[k] : k }</span>
+                <span>{k} { this.state.header[k] ? "(" + this.state.header[k] + ")" : ""}</span>
                 <span class="icon is-small">
                   <i class="fas fa-angle-down" aria-hidden="true"></i>
                 </span>
