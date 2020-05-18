@@ -52,9 +52,19 @@ class Hero extends Component {
                 </h2>
                 <br></br>
 
-                <div class="buttons is-centered">
-                  <button class="button is-primary" onClick={this.toggleModal}>Add Source</button>
-                </div>
+                  {
+                    window.location.href.includes("concepts") ?
+                      <div class="buttons is-centered">
+                        <button class="button is-primary" onClick={() => window.location='/'}>Browse Publishers</button>
+                        <button class="button is-primary" >Add Concept</button>
+                      </div>
+                    :
+                      <div class="buttons is-centered">
+                        <button class="button is-primary" onClick={this.toggleModal}>Add Source</button>
+                        <button class="button is-primary" onClick={() => window.location='/concepts'}>Browse Concepts</button>
+                      </div>
+                  }
+
               </div>
             </div>
           </div>
